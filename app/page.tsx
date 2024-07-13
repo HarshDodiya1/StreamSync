@@ -1,5 +1,10 @@
-import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
-  return <p className="text-red-200 font-bold text-5xl">This is the StreamSync Project</p>;
+  return (
+    <div className="flex flex-col gap-y-4">
+      <h1>Dashboard</h1>
+      <UserButton afterSwitchSessionUrl="/"/>
+    </div>
+  );
 }
